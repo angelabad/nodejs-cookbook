@@ -20,6 +20,8 @@
 case node['platform_family']
   when "smartos", "rhel", "debian", "fedora"
     default['nodejs']['install_method'] = 'package'
+  when "mac_os_x"
+	default['nodejs']['install_method'] = 'mac_pkg'
   else
     default['nodejs']['install_method'] = 'source'
 end
@@ -29,6 +31,7 @@ default['nodejs']['checksum'] = 'ef5e4ea6f2689ed7f781355012b942a2347e0299da0804a
 default['nodejs']['checksum_linux_x64'] = '305bf2983c65edea6dd2c9f3669b956251af03523d31cf0a0471504fd5920aac'
 default['nodejs']['checksum_linux_x86'] = '8fa2d952556c8b5aa37c077e2735c972c522510facaa4df76d4244be88f4dc0f'
 default['nodejs']['checksum_linux_arm-pi'] = '561ec2ebfe963be8d6129f82a7d1bc112fb8fbfc0a1323ebe38ef55850f25517'
+default['nodejs']['checksum_mac_os_x'] = '99b718692a77195e3aafab819b42ad7dba7e90e05a9b6f078bc5171c041331f8'
 default['nodejs']['dir'] = '/usr/local'
 default['nodejs']['npm'] = '1.4.4'
 default['nodejs']['src_url'] = "http://nodejs.org/dist"
