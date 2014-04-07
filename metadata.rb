@@ -18,6 +18,6 @@ recipe "nodejs::npm", "Installs npm from source - a package manager for node"
   depends c
 end
 
-%w{ debian ubuntu centos redhat smartos }.each do |os|
+%w{ debian ubuntu centos redhat smartos mac_os_x }.each do |os|
     supports os
 end
